@@ -14,14 +14,14 @@ async function main(page) {
 
   const $ = cheerio.load(pageHTML.data);
 
-  $(".shared-item_cards-list-image_card_component__itemLinkOverlay").each(
-    (index, element) => {
-      getPreviewPage($, index, element, page);
-    }
-  );
+  $(".shared-item_cards-list-image_card_component__itemLinkOverlay").each((index, element) => {
+    getPreviewPage($, index, element, page);
+  });
 }
 
 async function getPreviewPage($, indexElm, element, page) {
+  console.log("log game");
+
   const paginationURL = $(element).attr("href");
 
   const contentPageHTML = await axios.get(paginationURL);
