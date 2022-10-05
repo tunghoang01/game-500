@@ -98,7 +98,7 @@ function copyFile(file) {
   });
 }
 fs.readdirSync(rootFolder).forEach((file, i) => {
-  if (file.includes("game-20-")) {
+  if (file.includes("game-40-")) {
     const indexOfMinus1 = file.split("-", 1).join("-").length;
     const indexOfMinus2 = file.split("-", 2).join("-").length;
     const indexOfMinus3 = file.split("-", 3).join("-").length;
